@@ -25,4 +25,4 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 [Github Pages](https://vcristian1.github.io/note-taker-demo/)
 
 ### Screenshot
-![screenshot](/note-taker-demo/11-express-homework-demo-02.png)
+![screenshot](11-express-homework-demo-01.png)
