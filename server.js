@@ -32,9 +32,21 @@ app.get('/api/notes', (req, res) => {
     });
 });
 
-// app.post('/api/notes', (req, res) =>
-    
-// );
+app.post('/api/notes', (req, res) => {
+    fs.readFile(path.join(__dirname, './db/db.json'), (err, data) => {
+        if (err) throw err;
+        const notes = JSON.parse(data);
+        const newNote = req.body;
+        newNote.id = uuid();
+        notes.push(newNote);
+
+        const createNote = JSON.stringify(notes);
+        fs.writeFile(path.join(__dirname, "./db/db.json"), createNote, (err) => {
+            if (err) throw err;
+        });
+        res.json(newNote);
+    });
+});
 
 // GET Wildcard route 
 app.get('*', (req, res) =>
