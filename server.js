@@ -6,7 +6,7 @@ const fs = require("fs")
 const PORT = process.env.PORT || 3001;
 
 // Initialize our app variable by setting it to the value of express()
-const app = express()
+const app = express();
 
 // middleware to parse data
 app.use(express.json());
@@ -14,7 +14,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // 2 GET HTML Routes,
-app.get('/', (req, res) => 
+// GET Wildcard route 
+app.get('*', (req, res) =>
     res.sendFile(path.join(__dirname, 'public/index.html'))
 );
 
@@ -47,12 +48,6 @@ app.post('/api/notes', (req, res) => {
         res.json(newNote);
     });
 });
-
-// GET Wildcard route 
-app.get('*', (req, res) =>
-    res.sendFile(path.join(__dirname, 'public/index.html'))
-);
-
 
 // app.listen(PORT below
 app.listen(PORT, () =>

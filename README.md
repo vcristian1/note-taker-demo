@@ -22,7 +22,6 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 ```
 ### Links
 [Github Repository](https://github.com/vcristian1/note-taker-demo)
-[Github Pages](https://vcristian1.github.io/note-taker-demo/)
 
 ### Screenshot
 ![screenshot](11-express-homework-demo-01.png)
