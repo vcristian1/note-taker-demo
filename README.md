@@ -21,7 +21,8 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 ```
 ### Links
-[Github Repository](https://github.com/vcristian1/note-taker-demo)
+[Github Repository](https://github.com/vcristian1/note-taker-demo) <br>
+[Deploy to Heroku!](https://note-taker-demo-nu.herokuapp.com/notes.html)
 
 ### Screenshot
 ![screenshot](11-express-homework-demo-01.png)
